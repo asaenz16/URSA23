@@ -14,14 +14,12 @@ plt.style.use('seaborn-poster')
 
 #define probability function 
 def probability_function(x, t, L, h):
-    results_list = [] #will store the probabilities (should sum to 1)
     result = 0 #will store the resulting probability 
     for lamba_one in range(L): #iterates through the first submation 
         for lamba_two in range(L): #iterates through the second submation
-            term = (1/L)*(1/L) * np.exp(2 *np.pi*(x-L-1)*(1/L)*(1j)*(lamba_one+lamba_two)) * np.exp(-2j*t*(1/h)*(np.cos(2*np.pi*(lamba_one/L)) - np.cos(2*np.pi*(lamba_two/L)))) #computer probablity function 
-            term = term.real #convert imaginary to read numbers
+            term = (1/L)*(1/L) * np.exp(2 *np.pi*(x-L-1)*(1/L)*(1j)*(lamba_one+lamba_two)) * np.exp(-2j*t*(1/h)*(np.cos(2*np.pi*(lamba_one/L)) - np.cos(2*np.pi*(lamba_two/L)))) #compute probablity function 
+            term = term.real #convert imaginary to real numbers
             result += term #compute the final result with both real and imaginary (now real) numbers
-            results_list.append(result) #store each probability into a list
     return result #return the resultant probability
 
 """
@@ -42,7 +40,7 @@ t = 0
 vals =[]
 for x in range(L):
     vals.append(probability_function(x, t, L, h))
-print(sum(vals))
+print(sum(vals)) #Output (should be 1 or close to 1): 0.9999999999998135 
 
 #Test cases:
 #Assume h will be 1 (although periods between waves will shrink as h (decreases) approaches zero)
@@ -59,7 +57,7 @@ plot = plt.figure(figsize = (12,10))
 axes = plt.axes(projection='3d')
 
 x = np.arange(-L+1, L+2, 1) #establishes a range for x from -L+1 to L+2 based on parameter L above  
-t = np.arange(0, 1, 0.01) #ranges from 0 up to 1 (inclusive) incrementing by 0.01; Note: the range of t can be modified by modifying the first and second argument in the .arrange() function 
+t = np.arange(0, L, 0.01) #ranges from 0 up to L (inclusive) incrementing by 0.01; Note: the range of t can be modified by modifying the first and second argument in the .arrange() function 
 
 X, T = np.meshgrid(x, t) 
 Z = probability_function(X, T, (2*L)+1, h)  #Ex: if we want evaluate the probability function for L = 101, we can assign 50 to L (as (50 * 2) + 1 = 101)
@@ -75,4 +73,3 @@ plot.colorbar(surf, shrink=0.5, aspect=8)
 axes.view_init(25, 35)
 
 plt.show()
-
