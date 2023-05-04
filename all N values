@@ -1,0 +1,61 @@
+def all():
+    user_input = input("what is N: ")
+    user_input = int(user_input)
+    val = []
+    result_arr = []
+    for i in range(2, user_input + 3):
+        val.append(i)
+
+    result = 1
+    for i in range(user_input):
+        math = 1
+        for x in range(user_input - 1):
+            var1, var2, var3, var4, var5, var6 = 1, 1, 1, 1, 1, 1
+
+            if x < i:           #to get the first var
+                var1 = val[x]
+            else:
+                var1 = val[i]
+
+            if i <= x:          # to get the second var
+                var2 = val[x + 1]
+            elif i > x:
+                var2 = val[i]
+            else:
+                var2 = val[i + 1]
+
+            var3 = val[i] * (user_input + 2) # to get var 3
+
+            if x < i:           #to get the fourth var
+                var4 = val[x]
+            else:
+                var4 = val[i]
+
+            if i <= x:          # to get the firth var
+                var5 = val[x + 1]
+            elif i > x:
+                var5 = val[i]
+            else:
+                var5 = val[i + 1]
+
+            if i == x:          # to get the 6th var
+                var6 = val[i + 1] * (user_input + 2) 
+            elif i < x:
+                var6 = val[x + 1] * (user_input + 2)
+            else:
+                var6 = val[x] * (user_input + 2)
+            
+            math *= (1 + var1 * var2 - var3)/(1 + var4 * var5 - var6)
+
+        if user_input % 2 == 0:
+            result_arr.append(-math)
+            result *= -math
+        else:
+            result_arr.append(math)
+            result *= math
+
+    for element in result_arr: 
+        print(str(element) + "\n")
+    print("\n" + str(result))
+
+all()
