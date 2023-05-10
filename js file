@@ -1,0 +1,241 @@
+// Ahmed Zaidan and Muhammad Faks completed 5/9/2023
+
+window.onload = function() {    //on load to allow the view to render
+    const button1 = document.getElementById('b1');
+    const button2 = document.getElementById('b2');
+    const button3 = document.getElementById('b3');//get all the elements needed to modify using their id and store them in a const variable
+    const button4 = document.getElementById('b4');//get all the elements needed to modify using their id and store them in a const variable
+    const buttonPlus = document.getElementById('b5');
+    const buttonMultiply = document.getElementById('b6');
+    const buttonMinus = document.getElementById('b7');//get all the elements needed to modify using their id and store them in a const variable
+    const newButton = document.getElementById('b8');
+    const goalParagraph = document.getElementById('goal');//get all the elements needed to modify using their id and store them in a const variable
+    const winsParagraph = document.getElementById('wins');
+    const lossesParagraph = document.getElementById('losses');
+    const myList = document.getElementById("list");
+    const instruction = document.getElementById("rule");
+    winsParagraph.textContent = "Wins: 0"
+    lossesParagraph.textContent = "Losses: 0"
+    let num1 = null;        //this section inits all needed vars
+    let num2 = null;
+    let operation = null;
+    newGame();
+
+    button1.addEventListener('click', function() {  //add event listner to exec function when this button is pressed
+        button1.disabled = true;
+        button2.disabled = true;
+        button3.disabled = true;
+        button4.disabled = true;                    //disable all the buttons
+        button1.classList.add('pressed');
+        if (num1 == null){
+            num1 = parseFloat(button1.textContent);
+            buttonMinus.disabled = false;
+            buttonMultiply.disabled = false;                //select an operation if first number is selected
+            buttonPlus.disabled = false;
+            instruction.textContent = "Select an operation";
+        } else {
+            num2 = parseFloat(button1.textContent);
+            buttonMinus.disabled = true;                //otherwise the formula is added to the list and the win is checked
+            buttonMultiply.disabled = true;
+            buttonPlus.disabled = true;
+            appendList();
+            checkWin();
+        }
+    });
+    button2.addEventListener('click', function() {//add event listner to exec function when this button is pressed
+        button1.disabled = true;
+        button2.disabled = true;
+        button3.disabled = true; //disable all the buttons
+        button4.disabled = true;
+        button2.classList.add('pressed');
+        if (num1 == null){
+            num1 = parseFloat(button2.textContent);
+            buttonMinus.disabled = false;//select an operation if first number is selected
+            buttonMultiply.disabled = false;
+            buttonPlus.disabled = false;
+            instruction.textContent = "Select an operation";
+        } else {
+            num2 = parseFloat(button2.textContent);
+            buttonMinus.disabled = true;
+            buttonMultiply.disabled = true; //otherwise the formula is added to the list and the win is checked
+            buttonPlus.disabled = true;
+            appendList();
+            checkWin();
+        }
+    });
+    button3.addEventListener('click', function() {//add event listner to exec function when this button is pressed
+        button1.disabled = true;
+        button2.disabled = true; //disable all the buttons
+        button3.disabled = true;
+        button4.disabled = true;
+        button3.classList.add('pressed');
+        if (num1 == null){
+            num1 = parseFloat(button3.textContent);
+            buttonMinus.disabled = false;//select an operation if first number is selected
+            buttonMultiply.disabled = false;
+            buttonPlus.disabled = false;
+            instruction.textContent = "Select an operation";
+        } else {
+            num2 = parseFloat(button3.textContent);
+            buttonMinus.disabled = true;
+            buttonMultiply.disabled = true;
+            buttonPlus.disabled = true;
+            appendList(); //otherwise the formula is added to the list and the win is checked
+            checkWin();
+        }
+    });
+    button4.addEventListener('click', function() {//add event listner to exec function when this button is pressed
+        button1.disabled = true;
+        button2.disabled = true; //disable all the buttons
+        button3.disabled = true;
+        button4.disabled = true;
+        button4.classList.add('pressed');
+        if (num1 == null){
+            num1 = parseFloat(button4.textContent);
+            buttonMinus.disabled = false;
+            buttonMultiply.disabled = false;//select an operation if first number is selected
+            buttonPlus.disabled = false;
+            instruction.textContent = "Select an operation";
+        } else {
+            num2 = parseFloat(button4.textContent);
+            buttonMinus.disabled = true;
+            buttonMultiply.disabled = true;
+            buttonPlus.disabled = true;
+            appendList(); //otherwise the formula is added to the list and the win is checked
+            checkWin();
+        }
+    });
+    buttonPlus.addEventListener('click', function() {//add event listner to exec function when this button is pressed
+        operation = "+"
+        buttonMinus.disabled = true;
+        buttonMultiply.disabled = true;     //disable the opration buttons
+        buttonPlus.disabled = true;
+        instruction.textContent = "Select a Number";//change the instr
+        enable()
+    });
+    buttonMinus.addEventListener('click', function() {//add event listner to exec function when this button is pressed
+        operation = "-"
+        buttonMinus.disabled = true;
+        buttonMultiply.disabled = true;
+        buttonPlus.disabled = true;   //disable the opration buttons
+        instruction.textContent = "Select a Number";//change the instr
+        enable()
+    });
+    buttonMultiply.addEventListener('click', function() {//add event listner to exec function when this button is pressed
+        operation = "*"
+        buttonMinus.disabled = true;
+        buttonMultiply.disabled = true;   //disable the opration buttons
+        instruction.textContent = "Select a Number"; //change the instr
+        buttonPlus.disabled = true;
+        enable()
+    });
+    newButton.addEventListener('click', function() {//add event listner to exec function when this button is pressed
+        newGame();
+    });
+    function newGame(){
+        num1 = null;
+        num2 = null;
+        operation = null;
+        buttonMinus.disabled = true;
+        buttonMultiply.disabled = true;
+        buttonPlus.disabled = true;
+        const randomOperation = Math.floor(Math.random() * 3) + 1;      //this section generates the random numbers needed for a correct solution
+        const answer = Math.floor(Math.random() * 40) + 5;
+        const incorrectOne = Math.floor(Math.random() * 50) + 1;
+        const incorrectTwo = Math.floor(Math.random() * 50) + 1;
+        let answerOne;
+        let answerTwo;
+        if (randomOperation == 1){//addition
+            answerOne = Math.floor(Math.random() * (answer - 5)) + 1;
+            answerTwo = answer - answerOne;
+        } else if (randomOperation == 2){//subtraction
+            answerOne = Math.floor(Math.random() * (answer + 40)) + answer;
+            answerTwo = answerOne - answer;
+        } else {//multiplication
+            answerOne = Math.floor(Math.random() * 40) + 5;
+            answerTwo = answer / answerOne;
+            answerTwo = answerTwo.toFixed(2); 
+        }
+        const location1 = Math.floor(Math.random() * 2) + 1;
+        const location2 = Math.floor(Math.random() * 2) + 1;
+        if (location1 == 1){
+            button1.textContent = answerOne;          //sets the location of the correct operarnd 1
+            button2.textContent = incorrectOne;
+        } else {
+            button2.textContent = answerOne;
+            button1.textContent = incorrectOne;       //sets the location of the correct operarnd 1
+        }
+        if (location2 == 1){
+            button3.textContent = answerTwo;
+            button4.textContent = incorrectTwo;       //sets the location of the correct operarnd 2
+        } else {
+            button4.textContent = answerTwo;          //sets the location of the correct operarnd 2
+            button3.textContent = incorrectTwo;
+        }
+        goalParagraph.textContent = "Goal: " + answer;         //sets the goal
+        instruction.textContent = "Select an Number";        //sets the instr
+        button1.disabled = false;                                //reactive the buttons
+        button2.disabled = false;
+        button3.disabled = false;
+        button4.disabled = false;
+        button1.classList.remove('pressed');            // remeove all the red backgrounds from buttons
+        button2.classList.remove('pressed');
+        button3.classList.remove('pressed');
+        button4.classList.remove('pressed');
+        while (myList.firstChild) {             //remove all list elements
+            myList.removeChild(myList.firstChild);
+        }
+    }
+    function checkWin() {
+        const lastItem = myList.lastElementChild;
+        const parts = lastItem.textContent.split("=");          //get their guess and the goal
+        const result = Number(parts[1]);
+        const parts2 = goalParagraph.textContent.split(" ");
+        const answer = Number(parts2[1]);
+        console.log(answer);
+        console.log(result);
+        if(answer == result.toFixed(0)){   //win
+            const parts = winsParagraph.textContent.split(" ");
+            let wins = Number(parts[1]);
+            wins += 1;
+            winsParagraph.textContent = "Wins: " + wins;
+            instruction.textContent = "You WON! Play Again";
+        } else {
+            if(button1.classList.contains('pressed') && button2.classList.contains('pressed') && button3.classList.contains('pressed') && button4.classList.contains('pressed')){ //loss
+                const parts = lossesParagraph.textContent.split(" ");
+                let losses = Number(parts[1]);
+                losses += 1;
+                lossesParagraph.textContent = "Losses: " + losses;          //lost update everything
+                instruction.textContent = "You Lost :/ Play Again";
+            } else { //one more chance
+                operation = null;
+                num1 = null;            //reset all the stuff
+                num2 = null;
+                enable();
+                instruction.textContent = "Select a number";
+            }
+        }
+    }
+    function appendList() {
+        const newItem = document.createElement("li")
+        let result;
+        if (operation == "-"){          //find out which operation
+            result = num1 - num2;
+        } else if (operation == "+"){
+            result = num1 + num2;
+        } else {
+            result = num1 * num2;
+        }
+        newItem.textContent = num1 + operation + num2 + " = " + result.toFixed(0);      //add the lsit item
+        myList.appendChild(newItem);
+    }
+    function enable(){
+        const buttons = [button1, button2, button3, button4];       //make an array of all buttons
+        for (let i = 0; i < buttons.length; i++) {
+            const button = buttons[i];
+            if (!button.classList.contains('pressed')) {        //check if it doesnt contain the pressed classlist and enable it
+                button.disabled = false;
+            }
+        }
+    }
+}
