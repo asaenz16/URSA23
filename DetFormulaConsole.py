@@ -4,12 +4,9 @@
 # L = 2 and iterates through until the designated stop length.
 
 # CHANGEABLE CONSTANTS 
-STOP_L = 4
+STOP_L = 5
 EPSILON = 10**(-5)
 
-# TODO: do we want to check for all values of delta? Or are we 
-# okay with just one value to check at? Do we care about the 
-# step size we check for every delta, if we do end up doing this?
 STOP_D = 0.03
 STEP_SIZE = 0.01
 
@@ -18,12 +15,16 @@ STEP_SIZE = 0.01
 import numpy as np
 import scipy.special as sp
 import random
+import math 
 from matplotlib import pyplot as plt
 from itertools import permutations
 
 
 # used to define L_{ij} when i isn't equal to j
+# if i = j, returns 0
 def M(z, i, j, d):
+    # shortcut if delta is 0 or i = j (we don't care in this case)
+    if d == 0 or i == j: return 0
     return d*( 1 + z[i]*z[i] - d*z[i] )/((1 + z[i]*z[j] - d*z[j])*(1 + z[i]*z[j] - d*z[i]))
 
 # gives C(z) proper
@@ -32,9 +33,8 @@ def Cmat(z, d, L):
     diag = 0
     mat = [[ - M(z, i, j, d) for i in range(n)] for j in range(n) ]
     for i in range(n):
-        # need to "remove" the entry at M[i][i] by cancelling it out 
-        diag = sum(mat[i]) +M(z, i, i, d)
-        mat[i][i] = -diag + (L/z[i])
+        rowSum = sum(mat[i])
+        mat[i][i] = -rowSum + (L/z[i])
     return(mat)
 
 # gives overall coefficients 
@@ -42,7 +42,13 @@ def Coeff(y, z, d, L):
     n = len(z)
     terms = [ z[i]**(y[i]+1) for i in range(n)] 
     coeff = np.prod(terms)
-    coeff = coeff*np.linalg.det(Cmat(z, d, L))
+    matDet = np.linalg.det(Cmat(z, d, L))
+    coeff = coeff*matDet
+    
+    if matDet == 0: 
+        print("Lambda - M is singular, just wanted to let you know")
+        # return 0
+    
     coeff = 1/coeff
     return coeff
 
@@ -60,6 +66,7 @@ def inversions(s):
 def A(z, s, d):
     n = len(z)
     inv = inversions(s)
+    if d == 0: return (-1)**len(inv)
     terms = [
         -(1 + z[i[0]]*z[i[1]] - d*z[i[0]])/(1 + z[i[0]]*z[i[1]] - d*z[i[1]]) 
         for i in inv]
@@ -106,6 +113,7 @@ def BE_sol_initial(I,L):
     pol = [1]
     pol.extend([0]*(L-1))
     pol.append((-1)**n)
+    
     roots = np.roots(pol)
     sol = []
     for i in I:
@@ -136,7 +144,10 @@ def BE_all_sol(N,L,d,updates):
     sol = []
     for I in all_tuples:
         initial = BE_sol_initial(I,L)
-        if d != 0:
+        # don't need to run the numerical method if d = 0
+        # or if it's an empty product, meaning n = 1 (sol
+        # to both are roots of unity)
+        if d != 0 and N > 1:
             for k in range(updates):
                 initial = seq_update(initial, d, L)
         sol.append(initial)
@@ -157,6 +168,7 @@ def checkIdentity(matrix, epsilon):
 def solution(n, l, d):
     print("Checking n = {0}, l = {1}, delta = {2}".format(n, l, d))
     ord_sol = BE_all_sol(n, l, d, 10)
+
     all_sol = []
     for z in ord_sol:
         all_sol.extend(list(permutations(z)))
@@ -164,13 +176,13 @@ def solution(n, l, d):
     trans_mat = [ [ np.abs(sum([Coeff(y, z, d, l)*eigenfun(x, z, d) for z in all_sol])) for y in all_config] for x in all_config]
     return trans_mat
 
-
-
 # actually running stuff now 
 ERR_FLAG = False
 d = 0
 while d <= STOP_D:
-    for l in range(1, STOP_L + 1):
+    # for l in range(1, STOP_L + 1):
+    for i in range(1, math.floor((STOP_L+1)/2) + 1):
+        l = 2*i-1
         for n in range(1, l+1):
             mat = solution(n, l, d)
             if (checkIdentity(mat, EPSILON)): 
