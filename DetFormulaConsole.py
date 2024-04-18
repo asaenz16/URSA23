@@ -4,7 +4,8 @@
 # L = 2 and iterates through until the designated stop length.
 
 # CHANGEABLE CONSTANTS 
-STOP_L = 5
+START_L = 5
+STOP_L = 9
 EPSILON = 10**(-5)
 
 STOP_D = 0.03
@@ -180,8 +181,8 @@ def solution(n, l, d):
 ERR_FLAG = False
 d = 0
 while d <= STOP_D:
-    # for l in range(1, STOP_L + 1):
-    for i in range(1, math.floor((STOP_L+1)/2) + 1):
+    # for l in range(START_L, STOP_L + 1):
+    for i in range(START_L, int(math.floor((STOP_L+1)/2)) + 1):
         l = 2*i-1
         for n in range(1, l+1):
             mat = solution(n, l, d)

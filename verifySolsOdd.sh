@@ -1,16 +1,19 @@
 #!/bin/bash
 
 # COMMANDS FOR SBATCH
-#SBATCH -J verifySolutionsOdd	# job name 
-#SBATCH -p share 				# partition
+# name of the job
+#SBATCH -J verifySolutionsOdd
 
-#SBATCH -o stdOutput.out		# file for standard output
-#SBATCH -e stdError.err			# file for standard error
-
-#SBATCH --mem=10G		# memory to reserve
+#job resource specifications
+#SBATCH -p share
+#SBATCH --mem=5G
 #SBATCH -c 4
+#SBATCH --time=24:00:00
 
-module load python
+# files to write to
+#SBATCH -o stdOutput.out
+#SBATCH -e stdError.err
+
+
 
 python DetFormulaConsole.py > pythonOutput.out
-
