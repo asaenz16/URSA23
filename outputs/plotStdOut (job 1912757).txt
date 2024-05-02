@@ -1,0 +1,1 @@
+This computation took 5716.448298454285 seconds.
