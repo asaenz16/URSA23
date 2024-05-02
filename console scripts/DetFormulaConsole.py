@@ -4,8 +4,8 @@
 # L = 2 and iterates through until the designated stop length.
 
 # CHANGEABLE CONSTANTS 
-START_L = 5
-STOP_L = 9
+START_L = 1
+STOP_L = 5
 EPSILON = 10**(-5)
 
 STOP_D = 0.03
@@ -17,7 +17,6 @@ import numpy as np
 import scipy.special as sp
 import random
 import math 
-from matplotlib import pyplot as plt
 from itertools import permutations
 
 
