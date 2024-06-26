@@ -1,2 +1,5 @@
 theme: minima
 title: Quantum Spin Chains
+
+baseurl: "/URSA23"
+url: ""
