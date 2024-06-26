@@ -13,6 +13,8 @@ We introduce a formual for the spectral decomposition of the one-dimesional Heis
 - Crystal Lee, Undergraduate Student, Oregon State University
 - Mason Spears, Undergraduate Student, Oregon State University
 - Christie Chang, Undergraduate Student, Oregon State University
+- Muhammad Faks, Undergraduate Student, Oregon State University
+- Ahmed Zaidan, Undergraduate Student, Oregon State University
 
 
 # Funding 
@@ -20,3 +22,7 @@ We introduce a formual for the spectral decomposition of the one-dimesional Heis
 This projext is funded by Oregon State University
 
 A. Saezn Rodriguez and N. Elsasser were funded through the [Research and Innovation Seed Program (SciRIS)](https://science.oregonstate.edu/research/research-and-innovation-seed-program)
+
+C. Lee, M. Spears, and C. Chaing were funded through the [URSA Engage Progra, 2023-2024](https://academicaffairs.oregonstate.edu/research/ursa-engage)
+
+M. Faks and A. Zaidan were funded through the [URSA Engage Progra, 2022-2023](https://academicaffairs.oregonstate.edu/research/ursa-engage)
