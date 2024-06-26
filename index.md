@@ -25,6 +25,6 @@ This projext is funded by Oregon State University
 
 A. Saezn Rodriguez and N. Elsasser were funded through the [Research and Innovation Seed Program (SciRIS)](https://science.oregonstate.edu/research/research-and-innovation-seed-program) undeer the project titled *Polariton-controlled spin waves in quantum magnets for next-generation spintronics*
 
-C. Lee, M. Spears, and C. Chaing were funded through the [URSA Engage Progra, 2023-2024](https://academicaffairs.oregonstate.edu/research/ursa-engage)
+C. Lee, M. Spears, and C. Chaing were funded through the [URSA Engage Program 2023-2024](https://academicaffairs.oregonstate.edu/research/ursa-engage)
 
-M. Faks and A. Zaidan were funded through the [URSA Engage Progra, 2022-2023](https://academicaffairs.oregonstate.edu/research/ursa-engage)
+M. Faks and A. Zaidan were funded through the [URSA Engage Program 2022-2023](https://academicaffairs.oregonstate.edu/research/ursa-engage)
