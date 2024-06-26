@@ -1,2 +1,2 @@
-# URSA23
-URSA project, Oregon State University
+# Polariton-controlled spin waves in quantum magnets for next-generation spintronics
+SciRIS Project, Oregon State University
