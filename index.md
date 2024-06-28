@@ -8,7 +8,11 @@ We introduce a formual for the spectral decomposition of the one-dimesional Heis
 
 Below, you may find blog posts detailng some of out progress as we prepare our results for publication. Feel free to leave comments on the posts.
 
-# One-point function
+## The model
+
+The dynamics of the Heisenberg-Ising spin-1/2 model are determined by local spin-spin interactions. We take the spin particles to lie on an one-dimensional ring of length $$L$$. There are $$L$$ particles on the ring and each particle is either in spin-up configuration, $$| \uparrow \rangle$$
+
+## One-point function
 
 The one-point function is the probability of finding an up-spin at a specific position at a specific time.  The (brute force) computation for the one-point function requires a large number of summations given the wave function of the system. The number of terms in the summation increases exponentially with the size of the system. Thus, we test our formulas by computing the one-point function. Here is an example for the case of a ring of length 41 with two up-spins that start in the middle of the ring: 
 
