@@ -37,13 +37,13 @@ $$
 where $$\Delta \in \mathbb{R}$$ is the *anisotropy* parameter. Then, the Hamiltonian of the system is given as follows:
 
 $$
-H= \sum_{i=1}^{L} h_{i}: \mathcal{H} \rightarrow \mathcal{H}
-$$.
+H= \sum_{i=1}^{L} h_{i}: \mathcal{H} \rightarrow \mathcal{H}.
+$$
 
 The system eveloves according to the Schrödinger equation
 
 $$
-i \hbar \frac{d}{dt}\mid \Psi \rangle = H \mid \Psi \rangle
+i \hbar \frac{d}{dt}\mid \Psi \rangle = H \mid \Psi \rangle.
 $$
 
 
