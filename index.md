@@ -10,7 +10,13 @@ Below, you may find blog posts detailng some of out progress as we prepare our r
 
 ## The model
 
-The dynamics of the Heisenberg-Ising spin-1/2 model are determined by local spin-spin interactions. We take the spin particles to lie on an one-dimensional ring of length $$L$$. There are $$L$$ particles on the ring and each particle is either in spin-up configuration, $$\mid \uparrow\rangle$$, or in spin-down configuration, $$\mid \downarrow \rangle$$. The number of up-spins is consreved and fix it to be $$N$$.
+The dynamics of the Heisenberg-Ising spin-1/2 model are determined by local spin-spin interactions. We take the spin particles to lie on an one-dimensional ring of length $$L$$. There are $$L$$ particles on the ring and each particle is either in spin-up configuration, $$\mid \uparrow\rangle$$, or in spin-down configuration, $$\mid \downarrow \rangle$$. The different configurations of the system is given by a sequenc of $$L$$ up-spins and down-spins:
+
+$$\mid s_1 s_2 \cdots s_L \rangle$$,
+
+where $$s_i =mid \uparrow\rangle, mid \downarrow\rangle$$. These different configurations make up a complete orthonormal set of eigenbasis for Hilbert space $$\mathcal{H}$$ for the system
+
+
 
 ## One-point function
 
