@@ -14,8 +14,21 @@ The dynamics of the Heisenberg-Ising spin-1/2 model are determined by local spin
 
 $$\mid s_1 s_2 \cdots s_L \rangle$$,
 
-where $$s_i =\mid \uparrow\rangle, \mid \downarrow\rangle$$. These different configurations make up a complete orthonormal set of eigenbasis for Hilbert space $$\mathcal{H}$$ for the system
+where $$s_i =\mid \uparrow\rangle, \mid \downarrow\rangle$$. These different configurations make up a complete orthonormal set of eigenbasis for Hilbert space $$\mathcal{H}$$ for the system. In particular, we have
 
+$$\mathcal{H} = \mathbb{C}^2 \otimes \cdots \otimes \mathbb{C}^2$$
+
+so that $$\dim \mathcal{H} = 2^L$$. 
+
+The Hamiltonian (Energy operator) is a sum of local energy operators. The local operator $$h_i$$ acts on the $$s_i$$ and $$s_{i+1}$$ spins, $$i = 1, \dots L$$ with indexes/sites $$L+1$$
+and $$1$$ identified, as follows:
+
+$$
+h_i :\begin{cases} \mid \uparrow \uparrow \rangle \mapsto 0 \\
+\mid \uparrow \downarrow \rangle \mapsto \Delta \uparrow \downarrow - \downarrow \uparrow\\
+\mid \downarrow \uparrow \rangle \mapsto \Delta \downarrow \uparrow - \uparrow \downarrow\\
+\mid \downarrow \downarrow \rangle \mapsto 0 \end{cases}
+$$
 
 
 ## One-point function
