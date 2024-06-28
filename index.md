@@ -14,7 +14,7 @@ The dynamics of the Heisenberg-Ising spin-1/2 model are determined by local spin
 
 $$\mid s_1 s_2 \cdots s_L \rangle$$,
 
-where $$s_i =mid \uparrow\rangle, mid \downarrow\rangle$$. These different configurations make up a complete orthonormal set of eigenbasis for Hilbert space $$\mathcal{H}$$ for the system
+where $$s_i =\mid \uparrow\rangle, \mid \downarrow\rangle$$. These different configurations make up a complete orthonormal set of eigenbasis for Hilbert space $$\mathcal{H}$$ for the system
 
 
 
