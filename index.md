@@ -18,16 +18,32 @@ where $$s_i =\mid \uparrow\rangle, \mid \downarrow\rangle$$. These different con
 
 $$\mathcal{H} = \mathbb{C}^2 \otimes \cdots \otimes \mathbb{C}^2$$
 
-so that $$\dim \mathcal{H} = 2^L$$. 
+so that $$\dim \mathcal{H} = 2^L$$. The state of the system $$\mid Psi\rangle \in \mathcal{H}$$ is a linear combination of configuration basis elements with normed square equal to one. Given a state of the system, the probability of measuring the system in a specific configuration is given as follows:
+
+$$
+\mathrm{Prob}_{\Psi}(\mid s_1 \cdots s_L\rangle) = \vert\langle s_1 \cdots s_L \mid \Psi\rangle \vert^2
+$$
 
 The Hamiltonian (Energy operator) is a sum of local energy operators. The local operator $$h_i$$ acts on the $$s_i$$ and $$s_{i+1}$$ spins, $$i = 1, \dots L$$ with indexes/sites $$L+1$$
 and $$1$$ identified, as follows:
 
 $$
 h_i :\begin{cases} \mid \uparrow \uparrow \rangle \mapsto 0 \\
-\mid \uparrow \downarrow \rangle \mapsto \Delta \uparrow \downarrow - \downarrow \uparrow\\
-\mid \downarrow \uparrow \rangle \mapsto \Delta \downarrow \uparrow - \uparrow \downarrow\\
+\mid \uparrow \downarrow \rangle \mapsto \Delta \mid \uparrow \downarrow - \mid \downarrow \uparrow\\
+\mid \downarrow \uparrow \rangle \mapsto \Delta \mid \downarrow \uparrow - \mid \uparrow \downarrow\\
 \mid \downarrow \downarrow \rangle \mapsto 0 \end{cases}
+$$
+
+where $$\Delta \in \mathbb{R}$$ is the *anisotropy* parameter. Then, the Hamiltonian of the system is given as follows:
+
+$$
+H= \sum_{i=1}^{L} h_{i}: \mathcal{H} \rightarrow \mathcal{H}
+$$.
+
+The system eveloves according to the Schrödinger equation
+
+$$
+i \hbar \frac{d}{dt}\mid \Psi \rangle = H \mid \Psi \rangle
 $$
 
 
