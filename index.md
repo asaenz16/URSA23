@@ -10,7 +10,7 @@ Below, you may find blog posts detailng some of out progress as we prepare our r
 
 ## The model
 
-The dynamics of the Heisenberg-Ising spin-1/2 model are determined by local spin-spin interactions. We take the spin particles to lie on an one-dimensional ring of length $$L$$. There are $$L$$ particles on the ring and each particle is either in spin-up configuration, $$|\uparrow\rangle$$
+The dynamics of the Heisenberg-Ising spin-1/2 model are determined by local spin-spin interactions. We take the spin particles to lie on an one-dimensional ring of length $$L$$. There are $$L$$ particles on the ring and each particle is either in spin-up configuration, $$\mid \uparrow\rangle$$
 
 ## One-point function
 
