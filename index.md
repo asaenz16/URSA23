@@ -4,11 +4,17 @@ title: Spectral Decompostion for XXZ
 
 # Introduction
 
-We introduce a formual for the spectral decomposition of the one-dimesional Heisnberg-Ising (XXZ) spin-1/2 chain. The formula is based on the Bethe Ansatz and contour integrals. In this project, we devoloped code to verify the spectral decompositon numerically and also develope simple, yet powerful, simulations of the XXZ spin chain. The goal is to develop state of the art simulations for two-dimensional quantum spin chains through an approximation methos.
+We introduce a formual for the spectral decomposition of the one-dimesional Heisnberg-Ising (XXZ) spin-1/2 chain. The formula is based on the Bethe Ansatz and contour integrals. In this project, we devoloped code to verify the spectral decompositon numerically and also develope simple, yet powerful, simulations of the XXZ spin chain. The goal is to develop state of the art simulations for two-dimensional quantum spin chains through an approximation methods.
+
+Below, you may find blog posts detailng some of out progress as we prepare our results for publication. Feel free to leave comments on the posts.
+
+# One-point function
+
+The one-point function is the probability of finding an up-spin at a specific position at a specific time.  The (brute force) computation for the one-point function requires a large number of summations given the wave function of the system. The number of terms in the summation increases exponentially with the size of the system. Thus, we test our formulas by computing the one-point function. Here is an example for the case of a ring of length 41 with two up-spins that start in the middle of the ring: 
 
 ![plot](/URSA23/outputs/n2 l41 d0.0 [20, 21] (job 1912755).png)
 
-Below, you may find blog posts detailng some of out progress as we prepare our results for publication. Feel free to leave comments on the posts. 
+The dimension of the system is 820 and, for each time slice, the computation required a summation with roughly $$820^2=672400$$ terms. The computation took 5770 seconds using OSU's cluster
 
 # Team
 - Axel Saenz Rodiguez, Assitant Professor, Math, Oregon State University
