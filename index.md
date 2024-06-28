@@ -51,7 +51,7 @@ $$
 In this project, we aim to given an exact solution of the Schrödinger equation for the system with dterministic initial conditions
 
 $$
-\Psi(0)\rangle = \mid x_1, \dots, x_N \rangle 
+\mid \Psi(0)\rangle = \mid x_1, \dots, x_N \rangle 
 $$
 
 where the system has exactly $$N$$ up-spins at positions $$x_1, \dots x_N$$ at time zero.
