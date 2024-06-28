@@ -43,8 +43,18 @@ $$
 The system eveloves according to the Schrödinger equation
 
 $$
-i \hbar \frac{d}{dt}\mid \Psi \rangle = H \mid \Psi \rangle.
+i \hbar \frac{d}{dt}\mid \Psi(t) \rangle = H \mid \Psi(t) \rangle.
 $$
+
+## Objective 
+
+In this project, we aim to given an exact solution of the Schrödinger equation for the system with dterministic initial conditions
+
+$$
+\Psi(0)\rangle = \mid x_1, \dots, x_N \rangle 
+$$
+
+where the system has exactly $$N$$ up-spins at positions $$x_1, \dots x_N$$ at time zero.
 
 
 ## One-point function
