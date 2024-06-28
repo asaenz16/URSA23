@@ -18,7 +18,7 @@ where $$s_i =\mid \uparrow\rangle, \mid \downarrow\rangle$$. These different con
 
 $$\mathcal{H} = \mathbb{C}^2 \otimes \cdots \otimes \mathbb{C}^2$$
 
-so that $$\dim \mathcal{H} = 2^L$$. The state of the system $$\mid Psi\rangle \in \mathcal{H}$$ is a linear combination of configuration basis elements with normed square equal to one. Given a state of the system, the probability of measuring the system in a specific configuration is given as follows:
+so that $$\dim \mathcal{H} = 2^L$$. The state of the system $$\mid \Psi\rangle \in \mathcal{H}$$ is a linear combination of configuration basis elements with normed square equal to one. Given a state of the system, the probability of measuring the system in a specific configuration is given as follows:
 
 $$
 \mathrm{Prob}_{\Psi}(\mid s_1 \cdots s_L\rangle) = \vert\langle s_1 \cdots s_L \mid \Psi\rangle \vert^2
@@ -29,8 +29,8 @@ and $$1$$ identified, as follows:
 
 $$
 h_i :\begin{cases} \mid \uparrow \uparrow \rangle \mapsto 0 \\
-\mid \uparrow \downarrow \rangle \mapsto \Delta \mid \uparrow \downarrow - \mid \downarrow \uparrow\\
-\mid \downarrow \uparrow \rangle \mapsto \Delta \mid \downarrow \uparrow - \mid \uparrow \downarrow\\
+\mid \uparrow \downarrow \rangle \mapsto \Delta \mid \uparrow \downarrow \rangle - \mid \downarrow \uparrow\rangle\\
+\mid \downarrow \uparrow \rangle \mapsto \Delta \mid \downarrow \uparrow\rangle - \mid \uparrow \downarrow\rangle\\
 \mid \downarrow \downarrow \rangle \mapsto 0 \end{cases}
 $$
 
