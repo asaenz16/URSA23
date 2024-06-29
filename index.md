@@ -86,14 +86,12 @@ C. Lee, M. Spears, and C. Chaing were funded through the [URSA Engage Program 20
 
 M. Faks and A. Zaidan were funded through the [URSA Engage Program 2022-2023](https://academicaffairs.oregonstate.edu/research/ursa-engage)
 
-{% for tag in site.tags %}
-  <h3>{{ tag[0] }}</h3>
+  <h3>{{ Introduction Posts }}</h3>
   <ul>
-    {% for post in tag[1] %}
+    {% for post in intro %}
       <li><a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
   </ul>
-{% endfor %}
 
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async>
