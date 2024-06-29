@@ -78,20 +78,20 @@ The dimension of the system is 820 and, for each time slice, the computation req
 
 # Funding 
 
-This projext is funded by Oregon State University
+This project is funded by Oregon State University
 
-A. Saezn Rodriguez and N. Elsasser were funded through the [Research and Innovation Seed Program (SciRIS)](https://science.oregonstate.edu/research/research-and-innovation-seed-program) undeer the project titled *Polariton-controlled spin waves in quantum magnets for next-generation spintronics*
+A. Saezn Rodriguez and N. Elsasser were funded through the [Research and Innovation Seed Program (SciRIS)](https://science.oregonstate.edu/research/research-and-innovation-seed-program) under the project titled *Polariton-controlled spin waves in quantum magnets for next-generation spintronics*
 
 C. Lee, M. Spears, and C. Chaing were funded through the [URSA Engage Program 2023-2024](https://academicaffairs.oregonstate.edu/research/ursa-engage)
 
 M. Faks and A. Zaidan were funded through the [URSA Engage Program 2022-2023](https://academicaffairs.oregonstate.edu/research/ursa-engage)
 
-  <h3>{{ Introduction Posts }}</h3>
-  <ul>
-    {% for post in intro %}
+<h3>{{ Introduction Posts }}</h3>
+<ul>
+  {% for post in intro %}
       <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+   {% endfor %}
+</ul>
 
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async>
