@@ -56,6 +56,12 @@ $$
 
 where the system has exactly $$N$$ up-spins at positions $$x_1, \dots x_N$$ at time zero.
 
+# See
+
+Further discussion on the following topics:
+
+- [The one-point function](/URSA23/pages/OPF.html)
+
 
 # Team
 - Axel Saenz Rodiguez, Assitant Professor, Math, Oregon State University
