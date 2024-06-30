@@ -18,18 +18,12 @@ $$
 
 which is the quantity described above.
 
-The one-point function is determined by the marginal of the joint probability function for the system. Let $$\Xi (x)$$ denote all the configurations that contain the point $$x \in \mathbb{Z}$$. Then, the one-point function is given as follows
-
-$$
-\begin{align}
-\rho(x)&= \sum_{\vec{x} \in \Xi} \mathrm{Prob}_{\Psi}(\vec{x})
-\end{align}
-$$
+The one-point function is determined by the marginal of the joint probability function for the system. Let $$\Xi (x)$$ denote all the configurations that contain the point $$x \in \mathbb{Z}$$. Then, the one-point function is given as follow:
 
 $$
 \begin{align}
 \rho(x)&= \sum_{\vec{x} \in \Xi} \mathrm{Prob}_{\Psi}(\vec{x})\\
-&= \sum_{\vec{x} \in \Xi} \vert \langle \vec{x},\Psi \rangle\vert^2
+&= \sum_{\vec{x} \in \Xi} \vert \langle \vec{x}\mid \Psi \rangle\vert^2
 \end{align}
 $$
 
