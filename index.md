@@ -1,5 +1,5 @@
 ---
-title: Spectral Decompostion for XXZ
+title: Spectral decompostion for the periodic one-dimensional XXZ quantum spin-1/2 chain.
 ---
 
 # Introduction
