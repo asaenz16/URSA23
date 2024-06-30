@@ -1,5 +1,5 @@
 ---
-Title: One-Point Function
+title: One-Point Function
 ---
 
 The *one-point function* is the probability of finding an up-spin at a specific position at a specific time.  The (brute force) computation for the one-point function requires a large number of summations given the wave function of the system. The number of terms in the summation increases exponentially with the size of the system. Thus, we test our formulas by computing the one-point function. Here is an example for the case of a ring of length 41 with two up-spins that start in the middle of the ring: 
