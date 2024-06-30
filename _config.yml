@@ -1,5 +1,8 @@
 theme: minima
 title: Quantum Spin Chains
 
+plugins:
+  - jekyll-feed
+
 baseurl: "/URSA23"
 url: "/URSA23"
