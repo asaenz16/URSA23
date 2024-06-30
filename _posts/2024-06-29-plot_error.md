@@ -20,7 +20,7 @@ In the code, we only approximate the limit points by computing a term in the seq
 
 #### *Remark*
 
-The plots with $$\Delta=0$$ don't suffer from this error since the sequence in that case is constant, i.e. the sequence converges by the first tes.
+The plots with $$\Delta=0$$ don't suffer from this error since the sequence in that case is constant, i.e. the sequence converges by the first term.
 
 ## Next steps
 
