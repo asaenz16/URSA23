@@ -10,6 +10,8 @@ Check out this plot:
 
 *Q: What is wrong?*
 
+*A: The value of the graph should start as 1 (not 0.8) at time equal 0 for the positions where the up-signs are located.
+
 My best guess is that the *Bethe Equations (BE)* were not solved to good enough precision, i.e. the solutions we're not calibrated well enough. Recall that the BE are only solved numerically as the limit point of a sequence that converges to a solution due to the *Fixed Point Theorem (FPT)*.
 
 In the code, we only approximate the limit points by computing a term in the sequence with a large enough index. Thus, the values from the code are only approximations to the exact solutions.
