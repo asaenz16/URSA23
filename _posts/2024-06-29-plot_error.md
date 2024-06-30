@@ -10,3 +10,5 @@ Check out this plot:
 
 What is wrong?
 
+{% include utterances.html %}
+
