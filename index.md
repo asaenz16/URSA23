@@ -84,6 +84,8 @@ C. Lee, M. Spears, and C. Chaing were funded through the [URSA Engage Program 20
 
 M. Faks and A. Zaidan were funded through the [URSA Engage Program 2022-2023](https://academicaffairs.oregonstate.edu/research/ursa-engage)
 
+<link rel="alternate" type="application/rss+xml" href="{{ site.url }}/feed.xml">
+
 
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async>
