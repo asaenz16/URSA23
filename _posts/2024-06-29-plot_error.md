@@ -14,7 +14,7 @@ My best guess is that the *Bethe Equations (BE)* were not solved to good enough 
 
 In the code, we only approximate the limit points by computing a term in the sequence with a large enough index. Thus, the values from the code are only approximations to the exact solutions.
 
-*Remark*
+#### *Remark*
 
 The plots with $$\Delta=0$$ don't suffer from this error since the sequence in that case is constant, i.e. the sequence converges by the first tes.
 
