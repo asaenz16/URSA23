@@ -1,5 +1,5 @@
 ---
-title: Spectral decomposition for 1D XXZ.
+title: Spectral decomposition for 1D XXZ
 comments: true
 ---
 
