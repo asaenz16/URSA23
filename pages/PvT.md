@@ -1,7 +1,7 @@
 ---
-title: "Posts by tags"
+title: "Posts by Topic"
 ---
-# Posts sorted by tags
+# Posts sorted by topic
 {% for tag in site.tags %}
   <h3>{{ tag[0] }}</h3>
   <ul>
