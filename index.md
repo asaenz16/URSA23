@@ -67,8 +67,8 @@ Further discussion on the following topics:
 
 
 # Team
-- Axel Saenz Rodiguez, Assitant Professor, Math, Oregon State University
-- Nik Elsasser, PhD Student, Math, Oregon State University
+- [Axel Saenz Rodriguez](https://sites.google.com/view/axelsaenz){:target="_blank"}, Assistant Professor, Math, Oregon State University
+- Nik Elsaesser, PhD Student, Math, Oregon State University
 - Johaness Hurmann, Undergraduate Student, Oregon State University
 - Crystal Lee, Undergraduate Student, Oregon State University
 - Mason Spears, Undergraduate Student, Oregon State University
@@ -79,13 +79,13 @@ Further discussion on the following topics:
 
 # Funding 
 
-This project is funded by Oregon State University
+This project is funded by Oregon State University.
 
-A. Saezn Rodriguez and N. Elsasser were funded through the [Research and Innovation Seed Program (SciRIS)](https://science.oregonstate.edu/research/research-and-innovation-seed-program) under the project titled *Polariton-controlled spin waves in quantum magnets for next-generation spintronics*
+A. Saezn Rodriguez and N. Elsaesser were funded through the [Research and Innovation Seed Program (SciRIS)](https://science.oregonstate.edu/research/research-and-innovation-seed-program){:target="_blank"} under the project titled *Polariton-controlled spin waves in quantum magnets for next-generation spintronics*.
 
-C. Lee, M. Spears, and C. Chaing were funded through the [URSA Engage Program 2023-2024](https://academicaffairs.oregonstate.edu/research/ursa-engage)
+C. Lee, M. Spears, and C. Chaing were funded through the [URSA Engage Program 2023-2024.](https://academicaffairs.oregonstate.edu/research/ursa-engage){:target="_blank"}
 
-M. Faks and A. Zaidan were funded through the [URSA Engage Program 2022-2023](https://academicaffairs.oregonstate.edu/research/ursa-engage)
+M. Faks and A. Zaidan were funded through the [URSA Engage Program 2022-2023.](https://academicaffairs.oregonstate.edu/research/ursa-engage){:target="_blank"}
 
 
 
