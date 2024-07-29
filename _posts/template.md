@@ -1,6 +1,7 @@
 ---
 title: "Title"
 date: YYYY-MM-DD
+author: Name
 tags: ["tag1", "tag2"]
 ---
 
