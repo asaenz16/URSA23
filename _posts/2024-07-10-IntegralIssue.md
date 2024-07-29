@@ -1,6 +1,7 @@
 ---
 title: "Non-convergent Integral"
 date: 2024-07-10
+author: Axel Saenz
 tags: ["Dynamical Spin Structure Factor"]
 ---
 
