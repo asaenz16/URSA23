@@ -24,8 +24,8 @@
 #SBATCH --time=24:00:00
 
 # files to write to
-#SBATCH -o "dipolefixedStdOut (job %j).txt"
-#SBATCH -e "dipolefixedStdError (job %j).txt"
+#SBATCH -o "solitonJuliaStdOut (job %j).txt"
+#SBATCH -e "solitonJuliaStdError (job %j).txt"
 
 
 # load python yay 
