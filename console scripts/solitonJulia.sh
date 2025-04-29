@@ -15,11 +15,11 @@
 
 # SBATCH COMMANDS 
 # name of the job
-#SBATCH -J dipoleFixedJulia
+#SBATCH -J solitonJulia
 
 #job resource specifications
 #SBATCH -p share
-#SBATCH --mem=5G
+#SBATCH --mem=8G
 #SBATCH -c 4
 #SBATCH --time=24:00:00
 
@@ -31,13 +31,6 @@
 # load python yay 
 module load julia
 
-# creating a virtual display buffer (server doesn't have a 
-# display, which pyplot needs, so we mimic one)
-Xvfb :5 &
-export DISPLAY=:5
-XvfbPID=$(ps | grep Xvfb | grep -E -o ^[[:blank:]]*[[:digit:]]+ | grep -E -o [[:digit:]]+)
-
-
 
 # run the thing 
-julia axel_computations_fixed_dipole(1).ipynb $@
+julia soliton.jl $@
